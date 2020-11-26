@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class Rl {
     View view = new View();
     boolean flag;//是否为管理员
+    Num i = new Num();
 
 
     public boolean rl(ArrayList<User> list) {
-        Num i = new Num();
         switch (view.rl()) {
             case 1://用户注册
                 switch (view.register()){
@@ -24,11 +24,17 @@ public class Rl {
                         register(list, false);//普通用户注册
                         this.rl(list);
                         return list.get(i.i).flag;//返回是否为管理员
+                    default :
+                        System.out.println("输入错误!");
+                        break;
                 }
             case 2://用户登陆
                 login(list,i);
                 if (list.get(i.i).flag)
                 return list.get(i.i).flag;//返回是否为管理员
+            default :
+                System.out.println("输入错误!");
+                break;
         }
         return list.get(i.i).flag;//返回是否为管理员
     }

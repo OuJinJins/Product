@@ -1,17 +1,17 @@
 package com.oujinjin.www.entity;
 
-public class Produce {
+public class Product {
     //商品名称
     private String name;
     //商品编号
-    private int code;
+    private static int code;
     //商品价格
     private double price;
     //商品数量
     private int num;
 
     //构造
-    public Produce(String name, int code, double price, int num) {
+    public Product(String name, int code, double price, int num) {
         this.name = name;
         this.code = code;
         this.price = price;
@@ -19,7 +19,7 @@ public class Produce {
 
     }
 
-    public Produce() {
+    public Product() {
     }
 
     //getter&setter
