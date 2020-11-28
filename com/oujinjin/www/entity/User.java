@@ -8,7 +8,6 @@ public class User {
     private String name;
     private String password;
     private int money;
-    shoppingCart;
     public boolean flag = false;//ture 管理员 /false 普通用户
 
     /*
