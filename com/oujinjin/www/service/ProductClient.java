@@ -11,14 +11,14 @@ public class ProductClient {
         ArrayList<Goods> listPro = new ArrayList<>();
         ArrayList<User> list = new ArrayList<>();
         Rl rl = new Rl();
-        Zsgc zsgc = new Zsgc();
+        Crud crud = new Crud();
         Purchase purchase = new Purchase();
         boolean back = false;//是否返回上一级
 
         while(!back) {
             if (rl.rl(list)) {
                 System.out.println("管理员登陆成功!");
-                zsgc.zsgc(listPro);
+                crud.zsgc(listPro);
                 continue;
             }
             else {
